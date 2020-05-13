@@ -1,0 +1,43 @@
+<html>
+<style>
+body {
+  background-image: url('bdaybg.jpg');
+}
+</style>
+<head>
+<title>Happy Birthday Akpe</title>
+<script language = "javascript">
+var mainPictureCount = 0;
+var mainPictures = ["slide0.jpg", "slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg", "slide5.jpg", "slide6.jpg", "slide7.jpg", "slide8.jpg", "slide9.jpg", "slide10.jpg", "slide11.jpg", "slide12.jpg", "slide13.jpg", "slide14.jpg", "slide15.jpg", "slide16.jpg", "slide17.jpg", "slide18.jpg", "slide19.jpg", "slide20.jpg"];
+captiony.value = mainPictures[0]
+function nextClick() {
+	var sendThis = ""
+	++mainPictureCount
+	if (mainPictureCount > 20)
+	{
+		mainPictureCount = 20
+	}
+	sendThis = mainPictures[mainPictureCount]
+	return sendThis
+	}
+function previousClick() {
+	var sendThis = ""
+	--mainPictureCount
+	if (mainPictureCount < 0)
+	{
+		mainPictureCount = 0
+	}
+	sendThis = mainPictures[mainPictureCount]
+	return sendThis
+	}
+</script>
+</head>
+<body>
+<center>
+<img name = "mainPicture" height = "50%" width = 50%" src = "slide0.jpg">
+<br>
+<br>
+<button onClick = "mainPicture.src = previousClick()">Previous</button>
+<button onClick = "mainPicture.src = nextClick()">Next Slide --></button>
+</body>
+</html>
